@@ -9,3 +9,5 @@
 5. Step 5 finished, updated order.php::add() and orders.php::additem()
 
 6. Finished step 6, validate is working correctly.
+
+7. Step 7 finished, updated Order.php::proceed() and Order.php::cancel()

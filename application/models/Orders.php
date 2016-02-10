@@ -65,9 +65,8 @@ class Orders extends MY_Model {
                 $gotem[$menu->category] = 1;
 
             }
-            return isset($gotem['m']) && isset($gotem['d']) && isset($gotem['s']);
         }
-        return false;
+        return isset($gotem['m']) && isset($gotem['d']) && isset($gotem['s']);
     }
 
 }
