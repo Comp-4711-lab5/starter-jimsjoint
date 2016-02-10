@@ -107,10 +107,10 @@ class Order extends Application {
     }
 
     // proceed with checkout
-    function proceed($order_num) {
+    function commit($order_num) {
         //FIXME
         if(! $this->orders->validate($order_num))
-            redirect('/order/display_menu' . $order_num);
+            redirect('/order/display_menu/' . $order_num);
         $record = $this->orders->get($order_num);
         $record->date = date(DATE_ATOM);
         $record->status = 'c';
