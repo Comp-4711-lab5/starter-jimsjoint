@@ -22,7 +22,7 @@ class Order extends Application {
 
         $neworder = $this->orders->create();
         $neworder->num = $order_num;
-        $neworder->date = date();
+        $neworder->date = date('l'); // What should be passed to date??
         $neworder->status = 'a';
         $neworder->total = 0;
 
@@ -73,7 +73,8 @@ class Order extends Application {
     // make a menu ordering column
     function make_column($category) {
         //FIXME
-        return $items;
+        //return $items;
+        return $this->menu->some('category', $category);
     }
 
     // add an item to an order
